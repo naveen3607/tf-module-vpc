@@ -64,4 +64,5 @@ resource "aws_route" "default-vpc-peer-entry" {
 resource "aws_instance" "main" {
   instance_type = "t2.micro"
   image_id = "ami-03265a0778a880afb"
+  subnet_id = local.app_subnet_ids[0]
 }
