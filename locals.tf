@@ -13,6 +13,6 @@ locals {
   private_route_table_ids = concat(local.app_route_table_ids, local.db_route_table_ids)
 
   #Tags
-  tags = merge(var.tags, {vpc-module-terraform = "vpc"}
+  tags = merge(var.tags, {vpc-module-terraform = "vpc"}, {env = var.env})
 
 }
